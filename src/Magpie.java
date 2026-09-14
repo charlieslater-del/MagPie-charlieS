@@ -29,7 +29,7 @@ public class Magpie {
    */
   public String getGreeting() {
     // TODO Milestone 1: replace this with a greeting of your own.
-    return "PLACEHOLDER GREETING - change me first.";
+    return "Hello";
   }
 
   /**
