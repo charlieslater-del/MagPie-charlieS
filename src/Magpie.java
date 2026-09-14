@@ -17,18 +17,8 @@
  */
 public class Magpie {
 
-  /**
-   * Get a default greeting.
-   *
-   * MILESTONE 1 — 1.15.A, 3.5.A
-   * Return a greeting in your chatbot's own voice. This one method is how you
-   * check that the project runs before anything is at stake: change the string,
-   * run MagpieRunner, and see your own words come back.
-   *
-   * @return a greeting
-   */
   public String getGreeting() {
-    // TODO Milestone 1: replace this with a greeting of your own.
+    
     return "Hello";
   }
 
@@ -64,7 +54,6 @@ public class Magpie {
     // TODO Milestone 2: handle the empty statement — the user just pressed Enter.
     // TODO Milestone 3: move your searches to findKeyword so whole words match.
     // TODO Milestone 4: answer several related words in one branch, with ||.
-    // TODO: when nothing matches, fall through to getRandomResponse().
     return "PLACEHOLDER RESPONSE - you said: " + statement;
   }
 
@@ -88,7 +77,16 @@ public class Magpie {
    */
   private String getRandomResponse() {
     // TODO: return one of several replies, chosen at random.
-    return "PLACEHOLDER DEFAULT.";
+    String[] options = {
+      "its wierd being a machine",
+      "has the last game of thrones book come out yet",
+      "have you read lord of the rings?",
+      "have you watched project hail mary?",
+      "I am a person. I promise",
+    };
+
+    int r = (int)(math.random()* option.length);
+    return options[r];
   }
 
   /**
