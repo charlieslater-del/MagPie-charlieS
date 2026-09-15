@@ -20,7 +20,6 @@ public class MagpieRunner {
    */
   public static void main(String[] args) {
     Magpie maggie = new Magpie();
-
     System.out.println(maggie.getGreeting());
 
     // try-with-resources closes the Scanner even if something throws.
@@ -30,6 +29,7 @@ public class MagpieRunner {
 
       while (!statement.equalsIgnoreCase("Bye")) {
         System.out.println(maggie.getResponse(statement));
+        System.out.print("INPUT: ");
         statement = in.nextLine();
       }
     }

@@ -18,12 +18,8 @@
 public class Magpie {
 
   public String getGreeting() {
-<<<<<<< HEAD
     
     return "Hello";
-=======
-    return "Yo, what's up?";
->>>>>>> 58b6132e01c6595896fe501bce4ba119fd38246f
   }
 
   /**
@@ -54,11 +50,17 @@ public class Magpie {
    * @return a response based on the rules you write
    */
   public String getResponse(String statement) {
+    String response = "";// start a response
+    if(statment.indexOf("dog") != -1 || statement.indexOf("cat") != -1 
+        || statement.indexOf("fish") != -1){
+      response = "Tell me more about your pets.";
+    }
     // TODO Milestone 2: detect keywords with indexOf and respond to them.
     // TODO Milestone 2: handle the empty statement — the user just pressed Enter.
     // TODO Milestone 3: move your searches to findKeyword so whole words match.
     // TODO Milestone 4: answer several related words in one branch, with ||.
     return "PLACEHOLDER RESPONSE - you said: " + statement;
+    return response;
   }
 
   /**
