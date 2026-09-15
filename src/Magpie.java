@@ -18,8 +18,12 @@
 public class Magpie {
 
   public String getGreeting() {
+<<<<<<< HEAD
     
     return "Hello";
+=======
+    return "Yo, what's up?";
+>>>>>>> 58b6132e01c6595896fe501bce4ba119fd38246f
   }
 
   /**
