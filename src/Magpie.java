@@ -49,17 +49,44 @@ public class Magpie {
    * @param statement the user statement
    * @return a response based on the rules you write
    */
+
+
+  
   public String getResponse(String statement) {
     String response = "";// start a response
-    if(statment.indexOf("dog") != -1 || statement.indexOf("cat") != -1 
-        || statement.indexOf("fish") != -1){
+
+    // -- CHECK FOR BLANK --  
+    if (statement.trim().equals("") || statement.trim().length() == 0){
+      response = "dont give me a blank space"
+    }
+
+    // -- NEGATIVE --
+    else if(findKeyword(statement, "no") != -1){
+      response = "WHY SO NEGATIVE...?";
+    }
+    
+  
+    // -- PET --
+    else if(this.findKeyword("dog") != -1 || this.findKeyword("cat") != -1 
+        || this.findKeyword("fish") != -1){
       response = "Tell me more about your pets.";
     }
-    // TODO Milestone 2: detect keywords with indexOf and respond to them.
-    // TODO Milestone 2: handle the empty statement — the user just pressed Enter.
+
+    // -- FAMILY --
+    else if (this.findKeyword("mom") != -1 || this.findKeyword("dad") != -1 
+        || findKeyword("brother") != -1 || this.findKeyword("sister") != -1){
+        response = "tell me more about your family";
+    }
+
+    // -- RANDOM -- 
+    else{
+      this.getRandomResponse()
+    }
+    
+    
     // TODO Milestone 3: move your searches to findKeyword so whole words match.
     // TODO Milestone 4: answer several related words in one branch, with ||.
-    return "PLACEHOLDER RESPONSE - you said: " + statement;
+  
     return response;
   }
 
@@ -82,16 +109,16 @@ public class Magpie {
    * @return a non-committal string
    */
   private String getRandomResponse() {
-    // TODO: return one of several replies, chosen at random.
+   
     String[] options = {
-      "its wierd being a machine",
+      "its weird being a machine",
       "has the last game of thrones book come out yet",
       "have you read lord of the rings?",
       "have you watched project hail mary?",
       "I am a person. I promise",
     };
 
-    int r = (int)(math.random()* option.length);
+    int r = (int)(Math.random() * options.length);
     return options[r];
   }
 
