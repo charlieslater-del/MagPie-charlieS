@@ -78,6 +78,11 @@ public class Magpie {
         response = "tell me more about your family";
     }
 
+    // -- TEACHER -- 
+    else if(this.findKeyword("Mr. A")!= -1 || this.findKeyword("Mr. Adiletta")!= -1){
+      response = "that is my favorite teacher!"
+    }
+
     // -- RANDOM -- 
     else{
       this.getRandomResponse()
