@@ -57,7 +57,7 @@ public class Magpie {
 
     // -- CHECK FOR BLANK --  
     if (statement.trim().equals("") || statement.trim().length() == 0){
-      response = "dont give me a blank space"
+      response = "dont give me a blank space";
     }
 
     // -- NEGATIVE --
@@ -65,27 +65,28 @@ public class Magpie {
       response = "WHY SO NEGATIVE...?";
     }
     
+    // findKeyWord takes two arguments, what it's checking and what you're looking for
   
     // -- PET --
-    else if(this.findKeyword("dog") != -1 || this.findKeyword("cat") != -1 
-        || this.findKeyword("fish") != -1){
-      response = "Tell me more about your pets.";
+    else if(this.findKeyword(statement, "dog") != -1 || this.findKeyword(statement, "cat") != -1 
+        || this.findKeyword(statement, "fish") != -1){
+      response = "Tell me more about your pets";
     }
 
     // -- FAMILY --
-    else if (this.findKeyword("mom") != -1 || this.findKeyword("dad") != -1 
-        || findKeyword("brother") != -1 || this.findKeyword("sister") != -1){
+    else if (this.findKeyword(statement, "mom") != -1 || this.findKeyword(statement,"dad") != -1 
+        || findKeyword(statement,"brother") != -1 || this.findKeyword(statement,"sister") != -1){
         response = "tell me more about your family";
     }
 
     // -- TEACHER -- 
-    else if(this.findKeyword("Mr. A")!= -1 || this.findKeyword("Mr. Adiletta")!= -1){
-      response = "that is my favorite teacher!"
+    else if(this.findKeyword(statement,"Mr. A")!= -1 || this.findKeyword(statement,"Mr. Adiletta")!= -1){
+      response = "that is my favorite teacher!";
     }
 
     // -- RANDOM -- 
     else{
-      this.getRandomResponse()
+      this.getRandomResponse();
     }
     
     
