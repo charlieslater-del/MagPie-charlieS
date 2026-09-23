@@ -90,9 +90,7 @@ public class Magpie {
     }
     
     
-    // TODO Milestone 3: move your searches to findKeyword so whole words match.
-    // TODO Milestone 4: answer several related words in one branch, with ||.
-  
+   
     return response;
   }
 
